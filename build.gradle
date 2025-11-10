@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'de.t0g3pii'
+version = '1.0.0'
+description = 'ToolGuardian - Warns players when their tools/armor are about to break.'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.3-R0.1-SNAPSHOT'
+    // Paper bundles Adventure; we only need the API at compile time if desired.
+    compileOnly 'net.kyori:adventure-text-minimessage:4.16.0'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('copyToServer', Copy) {
+    dependsOn 'jar'
+    from(tasks.jar)
+    into file('../server/plugins')
+}
+

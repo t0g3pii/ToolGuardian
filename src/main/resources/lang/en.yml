@@ -1,0 +1,10 @@
+warn:
+  medium: "<yellow><bold>Heads up:</bold></yellow> {item} at <yellow>{percent}%</yellow> durability (<gray>{remaining}/{max}</gray>)."
+  low: "<gold><bold>Warning:</bold></gold> {item} at <gold>{percent}%</gold> durability (<gray>{remaining}/{max}</gray>)."
+  critical: "<red><bold>CRITICAL:</bold></red> {item} only <red>{percent}%</red> durability left (<gray>{remaining}/{max}</gray>)!"
+toggle:
+  now-enabled: "<green>ToolGuardian warnings: <bold>ON</bold></green>"
+  now-disabled: "<red>ToolGuardian warnings: <bold>OFF</bold></red>"
+  usage: "<gray>Usage:</gray> <yellow>/toolguardian toggle</yellow>"
+  no-permission: "<red>You don't have permission.</red>"
+

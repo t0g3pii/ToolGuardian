@@ -1,0 +1,20 @@
+name: ToolGuardian
+version: 1.0.0
+main: de.t0g3pii.toolguardian.ToolGuardianPlugin
+api-version: '1.21'
+authors: [ "t0g3pii" ]
+description: Warns players when their tools/armor are about to break.
+website: https://example.com
+
+commands:
+  toolguardian:
+    description: Toggle ToolGuardian warnings
+    usage: /<command> toggle
+    aliases: [ tg ]
+    permission: toolguardian.toggle
+
+permissions:
+  toolguardian.toggle:
+    description: Allows toggling ToolGuardian warnings
+    default: true
+

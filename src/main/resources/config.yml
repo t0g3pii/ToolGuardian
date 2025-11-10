@@ -1,0 +1,32 @@
+language: de
+
+# Gamemodes, in denen gewarnt wird
+enabled-gamemodes:
+  - SURVIVAL
+  - ADVENTURE
+
+# Slots, die überwacht werden (true/false)
+monitor:
+  main-hand: true
+  off-hand: true
+  head: true
+  chest: true
+  legs: true
+  feet: true
+
+# Warnstufen in Prozent (aufsteigend sortiert empfohlen).
+# Jede Stufe: percent (int), message (key aus der Sprachdatei), optional sound (Bukkit-Sound-Name), sound-volume, sound-pitch
+thresholds:
+  - percent: 20
+    message: warn.medium
+  - percent: 10
+    message: warn.low
+  - percent: 5
+    message: warn.critical
+    sound: BLOCK_NOTE_BLOCK_BELL
+    sound-volume: 1.0
+    sound-pitch: 1.0
+
+# Prüfintervall in Ticks (20 Ticks = 1 Sekunde)
+check-interval-ticks: 20
+
